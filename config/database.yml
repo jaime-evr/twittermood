@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: twittermood_development
+
+test:
+  <<: *default
+  database: twittermood_test
+
+production:
+  <<: *default
+  database: twittermood_production
+  username: twittermood
+  password: <%= ENV['TWITTERMOOD_DATABASE_PASSWORD'] %>

@@ -1,0 +1,13 @@
+<h1><% params[:username] %> home timeline</h1>
+
+<ol>
+  <% @tweets.each do |tweet| %>
+    <li>tweet: <%= tweet %></li>
+  <% end %>
+</ul>
+
+<ol>
+  <% @results.each do |result| %>
+    <li>Result: <%= result[0]['label'] %></li>
+  <% end %>
+</ul>

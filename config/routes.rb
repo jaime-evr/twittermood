@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   root 'home#index'
+  resources :timeline, only: :index
 end

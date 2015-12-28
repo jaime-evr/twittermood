@@ -1,13 +1,4 @@
-<h1><% params[:username] %> home timeline</h1>
+<h1>Get the mood of your twitter timeline</h1>
 
-<ol>
-  <% @tweets.each do |tweet| %>
-    <li>tweet: <%= tweet %></li>
-  <% end %>
-</ul>
+<%= link_to 'Login with twitter', '/auth/twitter' %>
 
-<ol>
-  <% @results.each do |result| %>
-    <li>Result: <%= result[0]['label'] %></li>
-  <% end %>
-</ul>
